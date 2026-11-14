@@ -1,0 +1,29 @@
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+
+.page {
+  min-width: 40px;
+  height: 40px;
+  padding: 0 12px;
+  border: 1px solid var(--ma-color-border);
+  background: #fff;
+  border-radius: var(--ma-radius-sm);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.page:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.current {
+  background: var(--ma-color-primary);
+  border-color: var(--ma-color-primary);
+  color: #fff;
+}

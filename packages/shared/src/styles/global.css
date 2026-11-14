@@ -1,0 +1,152 @@
+/*
+ * Design tokens + base styles. Loaded once by the shell (and by each MFE when
+ * it runs standalone). MFEs must only *consume* these variables; component
+ * styles live in each MFE's own CSS Modules so they can never leak.
+ */
+:root {
+  --ma-color-primary: #2067da;
+  --ma-color-primary-dark: #1450b0;
+  --ma-color-primary-soft: #e8f0fd;
+  --ma-color-accent: #e12d2d;
+  --ma-color-deal: #d9232d;
+  --ma-color-success: #1f8a4c;
+  --ma-color-success-soft: #e6f5ec;
+  --ma-color-warning: #c77700;
+  --ma-color-star: #f5a623;
+  --ma-color-text: #1a1a2e;
+  --ma-color-text-muted: #5c6370;
+  --ma-color-border: #dde1e7;
+  --ma-color-bg: #f4f6f9;
+  --ma-color-surface: #ffffff;
+  --ma-color-score: #1c3f94;
+
+  --ma-radius-sm: 6px;
+  --ma-radius: 10px;
+  --ma-radius-lg: 16px;
+  --ma-shadow-sm: 0 1px 3px rgba(16, 24, 40, 0.08);
+  --ma-shadow: 0 4px 16px rgba(16, 24, 40, 0.1);
+  --ma-shadow-lg: 0 12px 32px rgba(16, 24, 40, 0.16);
+
+  --ma-font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --ma-container: 1200px;
+  --ma-header-height: 64px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--ma-font);
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--ma-color-text);
+  background: var(--ma-color-bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--ma-color-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0 0 0.5em;
+  line-height: 1.25;
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+.ma-container {
+  width: 100%;
+  max-width: var(--ma-container);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.ma-card {
+  background: var(--ma-color-surface);
+  border: 1px solid var(--ma-color-border);
+  border-radius: var(--ma-radius);
+  box-shadow: var(--ma-shadow-sm);
+}
+
+.ma-input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--ma-color-border);
+  border-radius: var(--ma-radius-sm);
+  background: #fff;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.ma-input:focus {
+  outline: none;
+  border-color: var(--ma-color-primary);
+  box-shadow: 0 0 0 3px var(--ma-color-primary-soft);
+}
+
+.ma-input[aria-invalid='true'] {
+  border-color: var(--ma-color-accent);
+}
+
+.ma-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.ma-field-error {
+  color: var(--ma-color-accent);
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.ma-muted {
+  color: var(--ma-color-text-muted);
+}
+
+.ma-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+:focus-visible {
+  outline: 2px solid var(--ma-color-primary);
+  outline-offset: 2px;
+}

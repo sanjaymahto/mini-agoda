@@ -1,0 +1,23 @@
+.page {
+  padding-top: 20px;
+  padding-bottom: 24px;
+}
+
+.back {
+  display: inline-block;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 20px;
+  align-items: start;
+}
+
+@media (max-width: 960px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}

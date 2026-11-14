@@ -1,0 +1,91 @@
+.panel {
+  padding: 16px;
+  position: sticky;
+  top: calc(var(--ma-header-height) + 16px);
+  max-height: calc(100vh - var(--ma-header-height) - 32px);
+  overflow: auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.clear {
+  border: none;
+  background: none;
+  color: var(--ma-color-primary);
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.group {
+  border: none;
+  border-top: 1px solid var(--ma-color-border);
+  margin: 0;
+  padding: 14px 0 10px;
+}
+
+.group legend {
+  font-weight: 700;
+  font-size: 14px;
+  padding: 0;
+  margin-bottom: 8px;
+  float: left;
+  width: 100%;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 0;
+  font-size: 14px;
+  cursor: pointer;
+  clear: both;
+}
+
+.option input {
+  accent-color: var(--ma-color-primary);
+  width: 16px;
+  height: 16px;
+}
+
+.starRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  clear: both;
+}
+
+.starChip {
+  border: 1px solid var(--ma-color-border);
+  background: #fff;
+  border-radius: 999px;
+  padding: 4px 12px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.chipActive {
+  border-color: var(--ma-color-primary);
+  background: var(--ma-color-primary-soft);
+  color: var(--ma-color-primary-dark);
+}
+
+.range {
+  width: 100%;
+  accent-color: var(--ma-color-primary);
+  clear: both;
+}
+
+.rangeLabels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: var(--ma-color-text-muted);
+}

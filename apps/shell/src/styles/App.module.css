@@ -1,0 +1,36 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1;
+}
+
+/* MFE inspector "outline" mode - draws a labelled box around each remote. */
+:global(body.mfe-outline) :global([data-mfe]) {
+  display: block !important;
+  outline: 2px dashed var(--mfe-color, #e12d2d);
+  outline-offset: -2px;
+  position: relative;
+}
+:global(body.mfe-outline) :global(header [data-mfe]) {
+  display: inline-block !important;
+}
+:global(body.mfe-outline) :global([data-mfe])::before {
+  content: attr(data-mfe);
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 50;
+  background: var(--mfe-color, #e12d2d);
+  color: #fff;
+  font: 600 11px/1 monospace;
+  padding: 3px 6px;
+  pointer-events: none;
+}
+:global(body.mfe-outline) :global([data-mfe='search']) { --mfe-color: #2067da; }
+:global(body.mfe-outline) :global([data-mfe='hotel']) { --mfe-color: #1f8a4c; }
+:global(body.mfe-outline) :global([data-mfe='booking']) { --mfe-color: #c77700; }
+:global(body.mfe-outline) :global([data-mfe='account']) { --mfe-color: #8e44ad; }

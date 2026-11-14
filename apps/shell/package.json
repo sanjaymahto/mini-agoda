@@ -1,0 +1,22 @@
+{
+  "name": "@mini-agoda/shell",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Host application: layout, top-level routing and composition of all remote micro frontends.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@mini-agoda/shared": "*",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^7.1.0"
+  },
+  "devDependencies": {
+    "@mini-agoda/vite-config": "*"
+  }
+}

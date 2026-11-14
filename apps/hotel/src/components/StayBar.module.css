@@ -1,0 +1,30 @@
+.bar {
+  display: grid;
+  grid-template-columns: 1.3fr 1.3fr 0.7fr 0.7fr 0.7fr auto;
+  gap: 10px;
+  align-items: end;
+  padding: 14px;
+  margin-bottom: 14px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--ma-color-text-muted);
+  text-transform: uppercase;
+}
+
+.field input {
+  color: var(--ma-color-text);
+  font-weight: 500;
+  text-transform: none;
+}
+
+@media (max-width: 760px) {
+  .bar {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

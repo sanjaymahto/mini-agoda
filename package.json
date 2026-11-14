@@ -1,0 +1,32 @@
+{
+  "name": "mini-agoda",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A mini Agoda-style hotel booking website built with a Vite + Module Federation micro frontend architecture.",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "concurrently -k -n shell,search,hotel,booking,account -c magenta,blue,green,yellow,cyan \"npm run dev -w @mini-agoda/shell\" \"npm run dev -w @mini-agoda/search\" \"npm run dev -w @mini-agoda/hotel\" \"npm run dev -w @mini-agoda/booking\" \"npm run dev -w @mini-agoda/account\"",
+    "dev:remotes": "concurrently -k -n search,hotel,booking,account -c blue,green,yellow,cyan \"npm run dev -w @mini-agoda/search\" \"npm run dev -w @mini-agoda/hotel\" \"npm run dev -w @mini-agoda/booking\" \"npm run dev -w @mini-agoda/account\"",
+    "build": "npm run build -w @mini-agoda/search -w @mini-agoda/hotel -w @mini-agoda/booking -w @mini-agoda/account -w @mini-agoda/shell",
+    "preview": "concurrently -k -n shell,search,hotel,booking,account -c magenta,blue,green,yellow,cyan \"npm run preview -w @mini-agoda/shell\" \"npm run preview -w @mini-agoda/search\" \"npm run preview -w @mini-agoda/hotel\" \"npm run preview -w @mini-agoda/booking\" \"npm run preview -w @mini-agoda/account\"",
+    "start": "npm run build && npm run preview",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "clean": "rm -rf apps/*/dist"
+  },
+  "devDependencies": {
+    "@module-federation/vite": "^1.24.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^6.3.0",
+    "concurrently": "^9.1.0",
+    "typescript": "^5.7.2",
+    "vite": "^8.3.0"
+  },
+  "engines": {
+    "node": ">=20.19"
+  }
+}

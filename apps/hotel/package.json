@@ -1,0 +1,22 @@
+{
+  "name": "@mini-agoda/hotel",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Property MFE: hotel details, photo gallery, rooms & rates, reviews, location and policies.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@mini-agoda/shared": "*",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^7.1.0"
+  },
+  "devDependencies": {
+    "@mini-agoda/vite-config": "*"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "@mini-agoda/vite-config",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Shared Vite + Module Federation configuration factory for every Mini Agoda micro frontend.",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./remotes": "./remotes.js"
+  }
+}

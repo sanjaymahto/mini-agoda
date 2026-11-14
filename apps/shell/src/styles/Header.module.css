@@ -1,0 +1,103 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: var(--ma-header-height);
+  background: #fff;
+  border-bottom: 1px solid var(--ma-color-border);
+  box-shadow: var(--ma-shadow-sm);
+}
+
+.inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  text-decoration: none !important;
+  display: flex;
+  align-items: baseline;
+}
+
+.logoMain {
+  color: var(--ma-color-text);
+  margin-left: 4px;
+}
+
+.nav {
+  display: flex;
+  gap: 4px;
+  flex: 1;
+}
+
+.navLink {
+  padding: 8px 12px;
+  border-radius: var(--ma-radius-sm);
+  color: var(--ma-color-text);
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none !important;
+}
+
+.navLink:hover {
+  background: var(--ma-color-bg);
+}
+
+.active {
+  color: var(--ma-color-primary);
+  background: var(--ma-color-primary-soft);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.currency {
+  border: 1px solid var(--ma-color-border);
+  border-radius: var(--ma-radius-sm);
+  padding: 7px 8px;
+  background: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.wishlist {
+  position: relative;
+  font-size: 22px;
+  color: var(--ma-color-text);
+  text-decoration: none !important;
+  padding: 0 4px;
+}
+
+.count {
+  position: absolute;
+  top: -4px;
+  right: -8px;
+  background: var(--ma-color-accent);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  min-width: 18px;
+  height: 18px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4px;
+}
+
+@media (max-width: 760px) {
+  .nav {
+    display: none;
+  }
+  .inner {
+    justify-content: space-between;
+  }
+}
